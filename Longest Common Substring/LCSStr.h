@@ -26,5 +26,6 @@ public:
 	void getmatrix();
 	void printfmatrix();
 	string getcommonSubstring();
+	~LCSStr();
 };
 #endif

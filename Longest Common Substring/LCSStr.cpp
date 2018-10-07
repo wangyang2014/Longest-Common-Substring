@@ -97,3 +97,13 @@ string LCSStr::getcommonSubstring()
 	this->commonSubstring = this->compareStrA.substr(xy.x-maxbvalue+1,xy.x+1);
 	return this->commonSubstring;
 }
+
+LCSStr::~LCSStr()
+{
+	for(int i=0;i<this->Row;i++)
+	{
+		delete[] this->scorematrix[i];
+	}
+	delete[] this->scorematrix;
+	this->scorematrix = NULL;
+}
